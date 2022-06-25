@@ -4,6 +4,11 @@
 #include <iostream>
 #include "SFML/Graphics.hpp"
 #include "GameWindow.hpp"
+#include "TextBox.hpp"
+
+// Snake Game
+#include "World.hpp"
+#include "Snake.h"
 
 namespace hast{
 class Game{
@@ -15,21 +20,25 @@ public:
 	void HandleInput();
 	void Update();
 	void Render();
-	hast::GameWindow* GetWindow();
-
 	void Run();
+
+	hast::GameWindow* GetWindow();
 
 	// Clock
 	sf::Time GetElapsed() { return elapsed; };
-	void RestartClock() { clock.restart(); };
+	void RestartClock() { elapsed += clock.restart(); };
 
 
 private:
-	sf::Sprite player;
-	hast::GameWindow* gamewindow;
-
+	// GameEngine
+	hast::GameWindow gamewindow;
 	sf::Clock clock;
 	sf::Time elapsed;
+	hast::Textbox textBox;
+
+	// Game
+	World world;
+	Snake snake;
 
 };
 }

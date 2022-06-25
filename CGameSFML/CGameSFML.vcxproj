@@ -88,13 +88,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Snake.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\GameWindow.cpp" />
+    <ClCompile Include="src\World.cpp" />
+    <ClCompile Include="src\TextBox.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Snake.h" />
     <ClInclude Include="src\Game.hpp" />
     <ClInclude Include="src\GameWindow.hpp" />
+    <ClInclude Include="src\World.hpp" />
+    <ClInclude Include="src\TextBox.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
